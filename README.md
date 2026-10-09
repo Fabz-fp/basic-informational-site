@@ -16,8 +16,8 @@ A simple informational website built with Node.js as part of The Odin Project.
 - HTML5
 
 # What I Learned
-Creating an HTTP server with Node.js
-Handling URL-based routing
-Reading files asynchronously with Node.js
-Returning HTTP status codes
-Refactoring duplicated code into a reusable function
+- Creating an HTTP server with Node.js
+- Handling URL-based routing
+- Reading files asynchronously with Node.js
+- Returning HTTP status codes
+- Refactoring duplicated code into a reusable function
