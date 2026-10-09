@@ -2,6 +2,10 @@
 
 A simple informational website built with Node.js as part of The Odin Project.
 
+## Live Demo
+
+[View Live Site](https://basic-informational-site-hslx.onrender.com/)
+
 ## Features
 - Home page served at /
 - About page served at /about
