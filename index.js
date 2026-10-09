@@ -15,7 +15,36 @@ const server = http.createServer((request, response) => {
       response.end(data);
     });
   } else if (request.url === "/about") {
-    response.end("You are on the about page!");
+    fs.readFile("about.html", (error, data) => {
+      if (error) {
+        response.statusCode = 500;
+        response.end("Sorry, something went wrong.");
+        return;
+      }
+
+      response.end(data);
+    });
+  } else if (request.url === "/contact-me") {
+    fs.readFile("contact-me.html", (error, data) => {
+      if (error) {
+        response.statusCode = 500;
+        response.end("Sorry, something went wrong.");
+        return;
+      }
+
+      response.end(data);
+    });
+  } else {
+    fs.readFile("404.html", (error, data) => {
+      if (error) {
+        response.statusCode = 500;
+        response.end("Sorry, something went wrong.");
+        return;
+      }
+
+      response.statusCode = 404;
+      response.end(data);
+    });
   }
 });
 
