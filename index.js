@@ -1,6 +1,8 @@
 const http = require("node:http");
 const fs = require("node:fs");
 
+const PORT = process.env.PORT || 8080;
+
 function sendFile(fileName, response, statusCode = 200) {
   fs.readFile(fileName, (error, data) => {
     if (error) {
@@ -28,4 +30,6 @@ const server = http.createServer((request, response) => {
   }
 });
 
-server.listen(8080);
+server.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
